@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - Dark Theme with Electric Accents */
+
+@layer base {
+  :root {
+    --background: 218 23% 3%;
+    --foreground: 218 11% 95%;
+
+    --card: 220 13% 6%;
+    --card-foreground: 218 11% 95%;
+
+    --popover: 220 13% 6%;
+    --popover-foreground: 218 11% 95%;
+
+    --primary: 210 100% 60%;
+    --primary-foreground: 218 23% 3%;
+
+    --secondary: 217 19% 12%;
+    --secondary-foreground: 218 11% 85%;
+
+    --muted: 217 19% 8%;
+    --muted-foreground: 218 11% 65%;
+
+    --accent: 210 100% 60%;
+    --accent-foreground: 218 23% 3%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 19% 12%;
+    --input: 217 19% 12%;
+    --ring: 210 100% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom Portfolio Colors */
+    --electric-blue: 210 100% 60%;
+    --electric-blue-dark: 210 100% 45%;
+    --electric-blue-light: 210 100% 70%;
+    --neutral-50: 218 11% 95%;
+    --neutral-100: 218 11% 85%;
+    --neutral-200: 218 11% 75%;
+    --neutral-300: 218 11% 65%;
+    --neutral-600: 218 11% 45%;
+    --neutral-700: 218 11% 35%;
+    --neutral-800: 217 19% 12%;
+    --neutral-900: 218 23% 8%;
+    --neutral-950: 218 23% 3%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--electric-blue-dark)));
+    --gradient-radial: radial-gradient(circle at center, hsl(var(--electric-blue) / 0.1), transparent 70%);
+    --gradient-text: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--electric-blue-light)));
+
+    /* Shadows */
+    --shadow-glow: 0 0 50px hsl(var(--electric-blue) / 0.3);
+    --shadow-card: 0 8px 32px hsl(var(--background) / 0.3);
+    --shadow-elevated: 0 16px 64px hsl(var(--background) / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Light theme overrides (optional - portfolio is primarily dark) */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 218 23% 3%;
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --electric-blue: 210 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Text Gradients */
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow Effects */
+  .glow-blue {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Animated Underlines */
+  .link-underline {
+    @apply relative;
+  }
+  
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+  }
+  
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Grid Pattern Background */
+  .grid-pattern {
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--border)) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+
+  /* Smooth Scrolling Sections */
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+}
