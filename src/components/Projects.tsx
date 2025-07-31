@@ -11,6 +11,15 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "AI Resume Analyzer",
+      description: "Tracks DSA topics, project progress, flashcards, and GitHub-like calendar for coding practice.",
+      technologies: ["React.js", "Node.js", "MongoDB", "Express.js, React Router, zustand"],
+      features: ["Upload resume as PDF", "Gets AI-powered feedback on resume tailored to job title & description", "Smart ATS score and improvement tips", "Modern responsive UI"],
+      demoLink: "https://ai-resume-analyzer-snowy.vercel.app/auth?next=/",
+      githubLink: "https://github.com/Krrishbalana/AI-Resume-Analyzer",
+      category: "Productivity"
+    },
+    {
       title: "DSA Visualizer",
       description: "Interactive simulation of algorithms (sorting, searching, trees, pathfinding) with speed controls and animations.",
       technologies: ["React.js", "JavaScript", "CSS3", "D3.js"],
@@ -18,15 +27,6 @@ const Projects = () => {
       demoLink: "#",
       githubLink: "https://github.com/Krrishbalana/DSA-Visualizer",
       category: "Educational"
-    },
-    {
-      title: "Smart Interview Prep Dashboard",
-      description: "Tracks DSA topics, project progress, flashcards, and GitHub-like calendar for coding practice.",
-      technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
-      features: ["Progress Tracking", "Flashcards", "Calendar View", "Analytics"],
-      demoLink: "#",
-      githubLink: "#",
-      category: "Productivity"
     },
     {
       title: "AI Career Path Generator",
@@ -97,7 +97,7 @@ const Projects = () => {
                         {project.category}
                       </Badge>
                       <div className="flex space-x-2">
-                        <a href={project.githubLink}>
+                        <a target='blank' href={project.githubLink}>
                         <Button
                           size="sm"
                           variant="ghost"
@@ -106,6 +106,7 @@ const Projects = () => {
                           <Github className="h-4 w-4" />
                         </Button>
                         </a>
+                        <a target='blank' href={project.demoLink}>
                         <Button
                           size="sm"
                           variant="ghost"
@@ -113,6 +114,7 @@ const Projects = () => {
                         >
                           <ExternalLink className="h-4 w-4" />
                         </Button>
+                        </a>
                       </div>
                     </div>
                     <h3 className="text-xl font-semibold mb-3 group-hover:text-accent transition-colors">

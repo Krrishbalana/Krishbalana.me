@@ -86,7 +86,7 @@ const Hero = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
-          <a href="https://github.com/Krrishbalana">
+          <a target='blank' href="https://github.com/Krrishbalana">
           <Button
             size="lg"
             className="bg-gradient-primary hover:opacity-90 text-white border-0 px-8 py-6 text-lg shadow-glow hover:shadow-elevated transition-all duration-300"
@@ -96,7 +96,7 @@ const Hero = () => {
           </Button>
           </a>
           
-          <a href="https://drive.google.com/file/d/1eStTsv4i5T-0LNmx4PnPe-XtVYXIEjPu/view?usp=sharing">
+          <a target='blank' href="https://drive.google.com/file/d/1eStTsv4i5T-0LNmx4PnPe-XtVYXIEjPu/view?usp=sharing">
           <Button
             variant="outline"
             size="lg"
