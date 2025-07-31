@@ -10,7 +10,8 @@ import {
   GitBranch,
   Zap,
   Palette,
-  Brain
+  Brain,
+  icons
 } from 'lucide-react';
 
 const Skills = () => {
@@ -23,6 +24,12 @@ const Skills = () => {
       icon: <Globe className="h-6 w-6" />,
       skills: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Framer Motion", "Responsive Design"],
       color: "electric-blue"
+    },
+    {
+      title: "backend Development",
+      icon: <Code2 className="h-6 w-6" />,
+      skills: ["node.js", "Express.js", "mongoDB"],
+      color: "electric-blue-light",
     },
     
     {
