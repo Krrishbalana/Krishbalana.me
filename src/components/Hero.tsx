@@ -96,7 +96,7 @@ const Hero = () => {
           </Button>
           </a>
           
-          <a target='blank' href="https://drive.google.com/file/d/1eStTsv4i5T-0LNmx4PnPe-XtVYXIEjPu/view?usp=sharing">
+          <a target='blank' href="https://drive.google.com/file/d/1LBxjQJP3zbPT4qvOCjztHKkujBSL5ZF7/view?usp=sharing">
           <Button
             variant="outline"
             size="lg"
