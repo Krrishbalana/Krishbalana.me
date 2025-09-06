@@ -33,7 +33,7 @@ const Contact = () => {
     {
       icon: <Linkedin className="h-6 w-6" />,
       title: "LinkedIn",
-      href: "www.linkedin.com/in/krrishbalana",
+      href: "https://www.linkedin.com/in/krrish-balana/",
       color: "hover:text-blue-400",
     },
     {
@@ -171,7 +171,7 @@ const Contact = () => {
                     className="bg-gradient-primary hover:opacity-90 text-white border-0 py-6 text-lg shadow-glow hover:shadow-elevated transition-all duration-300 hover:text-white"
                   >
                     <a
-                      href="www.linkedin.com/in/krrishbalana"
+                      href="https://www.linkedin.com/in/krrish-balana/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

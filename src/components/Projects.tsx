@@ -1,9 +1,9 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github, Play } from 'lucide-react';
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github, Play } from "lucide-react";
 
 const Projects = () => {
   const ref = useRef(null);
@@ -11,32 +11,65 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "AI Resume Analyzer",
-      description: "Tracks DSA topics, project progress, flashcards, and GitHub-like calendar for coding practice.",
-      technologies: ["React.js", "Node.js", "MongoDB", "Express.js, React Router, zustand"],
-      features: ["Upload resume as PDF", "Gets AI-powered feedback on resume tailored to job title & description", "Smart ATS score and improvement tips", "Modern responsive UI"],
-      demoLink: "https://ai-resume-analyzer-snowy.vercel.app/auth?next=/",
-      githubLink: "https://github.com/Krrishbalana/AI-Resume-Analyzer",
-      category: "Productivity"
+      title: "AiChatBot-MERN",
+      description:
+        "AI-powered chatbot using MERN stack and OpenAI API for intelligent conversations.",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "MongoDB",
+        "openAI API",
+        "Express.js, React Router, zustand",
+      ],
+      features: [
+        "Upload resume as PDF",
+        "Gets AI-powered feedback on resume tailored to job title & description",
+        "Smart ATS score and improvement tips",
+        "Modern responsive UI",
+      ],
+      demoLink: "",
+      githubLink: "https://github.com/Krrishbalana/ChatBot-MERN",
+      category: "Productivity",
     },
     {
-      title: "DSA Visualizer",
-      description: "Interactive simulation of algorithms (sorting, searching, trees, pathfinding) with speed controls and animations.",
-      technologies: ["React.js", "JavaScript", "CSS3", "D3.js"],
-      features: ["Algorithm Visualization", "Speed Controls", "Interactive UI", "Multiple Algorithms"],
+      title: "YouTube-Style Video Hosting Backend",
+      description:
+        "Robust backend for video hosting platform with user auth, video management, and social features.",
+      technologies: [
+        "JavaScript",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Postman",
+        "JWT",
+        "Bcrypt",
+        "Multer",
+        "Cloudinary",
+      ],
+      features: [
+        "User Authentication",
+        "Video Upload & Management",
+        "Likes, Comments, Subscriptions",
+        "Secure Password Handling",
+      ],
       demoLink: "#",
-      githubLink: "https://github.com/Krrishbalana/DSA-Visualizer",
-      category: "Educational"
+      githubLink: "https://github.com/Krrishbalana/Visionary-Backend",
+      category: "Backend(MERN)",
     },
     {
-      title: "AI Career Path Generator",
-      description: "MERN-based personalized learning planner with OpenAI API integration and authentication.",
-      technologies: ["MERN Stack", "OpenAI API", "JWT", "Tailwind CSS"],
-      features: ["AI Integration", "User Authentication", "Personalized Plans", "Progress Tracking"],
+      title: "YouTube-Style Video Hosting Frontend",
+      description:
+        "Feature-rich frontend for video hosting platform with responsive design and interactive UI.",
+      technologies: ["React.js", "Tailwind CSS", "Axios", "React Router"],
+      features: [
+        "Responsive Video Grid",
+        "Interactive Video Player",
+        "User Profiles & Subscriptions",
+      ],
       demoLink: "#",
-      githubLink: "#",
-      category: "AI/ML"
-    }
+      githubLink: "https://github.com/Krrishbalana/Visionary-Frontend",
+      category: "Frontend(MERN)",
+    },
   ];
 
   const containerVariants = {
@@ -77,7 +110,8 @@ const Projects = () => {
               Featured <span className="text-gradient">Projects</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A showcase of my recent work and passion projects that demonstrate my skills in full-stack development.
+              A showcase of my recent work and passion projects that demonstrate
+              my skills in full-stack development.
             </p>
           </motion.div>
 
@@ -97,23 +131,23 @@ const Projects = () => {
                         {project.category}
                       </Badge>
                       <div className="flex space-x-2">
-                        <a target='blank' href={project.githubLink}>
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          className="h-8 w-8 p-0 opacity-0 group-hover:opacity-100 transition-opacity"
-                        >
-                          <Github className="h-4 w-4" />
-                        </Button>
+                        <a target="blank" href={project.githubLink}>
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            className="h-8 w-8 p-0 opacity-0 group-hover:opacity-100 transition-opacity"
+                          >
+                            <Github className="h-4 w-4" />
+                          </Button>
                         </a>
-                        <a target='blank' href={project.demoLink}>
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          className="h-8 w-8 p-0 opacity-0 group-hover:opacity-100 transition-opacity"
-                        >
-                          <ExternalLink className="h-4 w-4" />
-                        </Button>
+                        <a target="blank" href={project.demoLink}>
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            className="h-8 w-8 p-0 opacity-0 group-hover:opacity-100 transition-opacity"
+                          >
+                            <ExternalLink className="h-4 w-4" />
+                          </Button>
                         </a>
                       </div>
                     </div>
@@ -127,10 +161,16 @@ const Projects = () => {
 
                   {/* Technologies */}
                   <div className="mb-4">
-                    <h4 className="text-sm font-medium mb-2 text-muted-foreground">Technologies</h4>
+                    <h4 className="text-sm font-medium mb-2 text-muted-foreground">
+                      Technologies
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="text-xs">
+                        <Badge
+                          key={tech}
+                          variant="secondary"
+                          className="text-xs"
+                        >
                           {tech}
                         </Badge>
                       ))}
@@ -139,10 +179,15 @@ const Projects = () => {
 
                   {/* Features */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-medium mb-2 text-muted-foreground">Key Features</h4>
+                    <h4 className="text-sm font-medium mb-2 text-muted-foreground">
+                      Key Features
+                    </h4>
                     <ul className="space-y-1">
                       {project.features.map((feature) => (
-                        <li key={feature} className="text-sm text-muted-foreground flex items-center">
+                        <li
+                          key={feature}
+                          className="text-sm text-muted-foreground flex items-center"
+                        >
                           <div className="w-1.5 h-1.5 bg-accent rounded-full mr-2" />
                           {feature}
                         </li>
@@ -175,18 +220,20 @@ const Projects = () => {
           </div>
 
           {/* More Projects Button */}
-          <motion.div
-            variants={itemVariants}
-            className="text-center mt-12"
-          >
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-border hover:bg-card px-8 py-4 text-lg group"
+          <motion.div variants={itemVariants} className="text-center mt-12">
+            <a
+              href="https://github.com/Krrishbalana?tab=repositories"
+              target="blank"
             >
-              View All Projects
-              <ExternalLink className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-border hover:bg-card px-8 py-4 text-lg group hover:text-black hover:bg-white transition-all duration-500"
+              >
+                View All Projects
+                <ExternalLink className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </motion.div>
         </motion.div>
       </div>

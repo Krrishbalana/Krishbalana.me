@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion';
-import { ChevronDown, Download, ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { motion } from "framer-motion";
+import { ChevronDown, Download, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const scrollToAbout = () => {
-    const aboutSection = document.querySelector('#about');
+    const aboutSection = document.querySelector("#about");
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      aboutSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -34,7 +34,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Background Effects */}
       <div className="absolute inset-0 grid-pattern opacity-20" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial opacity-30 animate-pulse-slow" />
@@ -47,10 +50,7 @@ const Hero = () => {
         className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10"
       >
         {/* Greeting */}
-        <motion.div
-          variants={itemVariants}
-          className="mb-6"
-        >
+        <motion.div variants={itemVariants} className="mb-6">
           <span className="text-lg text-muted-foreground">Hello, I'm</span>
         </motion.div>
 
@@ -77,8 +77,9 @@ const Hero = () => {
           variants={itemVariants}
           className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
         >
-          Crafting modern web experiences with React,Tailwind CSS and cutting-edge technologies. 
-          Passionate about clean code, user experience, and solving complex problems.
+          Crafting modern web experiences with React,Tailwind CSS and
+          cutting-edge technologies. Passionate about clean code, user
+          experience, and solving complex problems.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -86,25 +87,28 @@ const Hero = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
-          <a target='blank' href="https://github.com/Krrishbalana">
-          <Button
-            size="lg"
-            className="bg-gradient-primary hover:opacity-90 text-white border-0 px-8 py-6 text-lg shadow-glow hover:shadow-elevated transition-all duration-300"
-          >
-            View My Work
-            <ExternalLink className="ml-2 h-5 w-5" />
-          </Button>
+          <a target="blank" href="https://github.com/Krrishbalana">
+            <Button
+              size="lg"
+              className="bg-gradient-primary hover:opacity-90 text-white border-0 px-8 py-6 text-lg shadow-glow hover:shadow-elevated transition-all duration-300"
+            >
+              View My Work
+              <ExternalLink className="ml-2 h-5 w-5" />
+            </Button>
           </a>
-          
-          <a target='blank' href="https://drive.google.com/file/d/1LBxjQJP3zbPT4qvOCjztHKkujBSL5ZF7/view?usp=sharing">
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-border hover:text-white hover:bg-blue-500 px-8 py-6 text-lg transition-all duration-300"
+
+          <a
+            target="blank"
+            href="https://drive.google.com/file/d/1kctXEUox5qOk8ujwSQQQmms8f3fKQONV/view?usp=drive_link"
           >
-            Download CV
-            <Download className="ml-2 h-5 w-5" />
-          </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-border hover:text-white hover:bg-blue-500 px-8 py-6 text-lg transition-all duration-300"
+            >
+              Download CV
+              <Download className="ml-2 h-5 w-5" />
+            </Button>
           </a>
         </motion.div>
 
@@ -117,7 +121,7 @@ const Hero = () => {
             { number: "250+", label: "LeetCode Problems" },
             { number: "10+", label: "Projects Built" },
             { number: "5+", label: "Certifications" },
-            { number: "1000+", label: "Lines of Code Written"},
+            { number: "1000+", label: "Lines of Code Written" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -129,9 +133,7 @@ const Hero = () => {
               <div className="text-2xl md:text-3xl font-bold text-gradient mb-2">
                 {stat.number}
               </div>
-              <div className="text-sm text-muted-foreground">
-                {stat.label}
-              </div>
+              <div className="text-sm text-muted-foreground">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>

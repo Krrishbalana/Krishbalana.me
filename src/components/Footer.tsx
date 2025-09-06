@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Heart, Github, Linkedin, Code, Mail } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+import { motion } from "framer-motion";
+import { Heart, Github, Linkedin, Code, Mail } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,24 +8,24 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <Linkedin className="h-5 w-5" />,
-      href: "https://www.linkedin.com/in/krrish-balana-525886235/",
-      label: "LinkedIn"
+      href: "https://www.linkedin.com/in/krrish-balana/",
+      label: "LinkedIn",
     },
     {
       icon: <Github className="h-5 w-5" />,
       href: "https://github.com/Krrishbalana",
-      label: "GitHub"
+      label: "GitHub",
     },
     {
       icon: <Code className="h-5 w-5" />,
       href: "https://leetcode.com/u/krishbalana/",
-      label: "LeetCode"
+      label: "LeetCode",
     },
     {
       icon: <Mail className="h-5 w-5" />,
       href: "mailto:krrishbalana@gmail.com",
-      label: "Email"
-    }
+      label: "Email",
+    },
   ];
 
   const quickLinks = [
@@ -33,22 +33,32 @@ const Footer = () => {
     { name: "Projects", href: "#projects" },
     { name: "Experience", href: "#experience" },
     { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "#contact" },
   ];
 
   const technologies = [
-    "React.js","JavaScript", "JWT", "SQL", "Tailwind CSS", "Framer Motion", "Git/Github"
+    "React.js",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT",
+    "OpenAI API",
+    "Bcrypt",
+    "Postman",
+    "Tailwind CSS",
+    "Git/Github",
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -64,13 +74,17 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold text-gradient mb-4 cursor-pointer" onClick={scrollToTop}>
+              <h3
+                className="text-xl font-bold text-gradient mb-4 cursor-pointer"
+                onClick={scrollToTop}
+              >
                 Krish Balana
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Full Stack Web Developer passionate about creating innovative solutions and beautiful user experiences.
+                Full Stack Web Developer passionate about creating innovative
+                solutions and beautiful user experiences.
               </p>
-              
+
               {/* Social Links */}
               <div className="flex space-x-3">
                 {socialLinks.map((social) => (
@@ -156,7 +170,8 @@ const Footer = () => {
                   href="tel:+918690909867"
                   className="hover:text-accent transition-colors duration-300 link-underline"
                 >
-                  <br />+91-8690909867
+                  <br />
+                  +91-8690909867
                 </a>
               </div>
             </motion.div>
@@ -176,7 +191,7 @@ const Footer = () => {
             <Heart className="h-4 w-4 mx-2 text-red-500 animate-pulse" />
             <span>and lots of coffee ☕</span>
           </div>
-          
+
           <div className="flex items-center space-x-4 text-sm text-muted-foreground">
             <span>Built with React.js & Framer Motion</span>
           </div>
